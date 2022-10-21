@@ -56,7 +56,7 @@ module.exports = {
         })
 
         await common.dispatchGraphQL(query, function (data) {
-            callback(data.aiWorkflows.workflows);
+            callback(data.actor.account.aiWorkflows.workflows);
         });
     }
 }
